@@ -5,6 +5,7 @@
     <shorten />
     <statistics />
     <boost-links />
+    <footer-component />
   </div>
 </template>
 
@@ -14,6 +15,7 @@ import Hero from '../components/Hero.vue'
 import Shorten from '../components/Shorten.vue'
 import Statistics from '../components/Statistics.vue'
 import BoostLinks from '../components/BoostLinks.vue'
+import FooterComponent from '../components/Footer.vue'
 export default {
   components: { 
     Navbar,
@@ -21,6 +23,7 @@ export default {
     Shorten,
     Statistics,
     BoostLinks,
+    FooterComponent,
   },
   
 }
