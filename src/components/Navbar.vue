@@ -22,7 +22,8 @@ export default {
 <style scoped lang="scss">
 .navbar {
   display: inline-flex;
-  margin: 60px 0;
+  margin-top: 60px;
+  margin-bottom: 60px;
   width: calc(100% - 20vw);
   font-size: 16px;
 
@@ -59,10 +60,10 @@ export default {
     padding: 7px 20px;
     border-radius: 20px;
     font-size: 15px;
-  }
-  
-  & .sign-up:hover {
-    opacity: .6;
+
+    &:hover {
+      opacity: .6;
+    }
   }
 }
 </style>

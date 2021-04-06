@@ -47,13 +47,17 @@ export default {
       margin-top: 10px;
     }
 
-    & .get-started {
+    & button {
       background: var(--cyan);
       color: white;
       padding: 9px 28px;
       border-radius: 20px;
       margin-top: 50px;
       font-size: 20px;
+      
+      &:hover {
+        opacity: .6;
+      }
     }
   }
 }
