@@ -52,7 +52,7 @@ export default {
       color: white;
       padding: 9px 28px;
       border-radius: 20px;
-      margin-top: 50px;
+      margin-top: 40px;
       font-size: 20px;
       
       &:hover {

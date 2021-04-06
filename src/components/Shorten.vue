@@ -18,9 +18,10 @@ export default {
   background-image: url(/img/bg-shorten-desktop.a82de60e.svg);
   background-color: var(--dark-violet);
   background-size: cover;
+  position: relative;
+  z-index: 2;
   padding: 40px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 70px;
   border-radius: 7px;
   display: flex;
 
@@ -35,7 +36,7 @@ export default {
   & button {
     background: var(--cyan);
     color: white;
-    padding: 17px 30px;
+    padding: 17px 40px;
     border-radius: 7px;
     margin-left: 10px;
   }

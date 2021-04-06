@@ -3,6 +3,7 @@
     <navbar />
     <hero />
     <shorten />
+    <statistics />
   </div>
 </template>
 
@@ -10,11 +11,13 @@
 import Navbar from '../components/Navbar.vue'
 import Hero from '../components/Hero.vue'
 import Shorten from '../components/Shorten.vue'
+import Statistics from '../components/Statistics.vue'
 export default {
   components: { 
     Navbar,
     Hero,
     Shorten,
+    Statistics,
   },
   
 }
