@@ -50,13 +50,12 @@ export default {
     & button {
       background: var(--cyan);
       color: white;
-      padding: 9px 28px;
-      border-radius: 20px;
+      padding: 13px 28px;
+      border-radius: 30px;
       margin-top: 40px;
-      font-size: 20px;
-      
+
       &:hover {
-        opacity: .6;
+        background-color: #85eaea;
       }
     }
   }

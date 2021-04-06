@@ -1,9 +1,7 @@
 <template>
   <div class="wrraper shorten">
-    <input type="text" placeholder="Shorten a link here...">
-    <button>
-      Shorten It!
-    </button>
+    <input type="text" placeholder="Shorten a link here..." />
+    <button>Shorten It!</button>
   </div>
 </template>
 
@@ -36,9 +34,13 @@ export default {
   & button {
     background: var(--cyan);
     color: white;
-    padding: 17px 40px;
+    padding: 15px 40px;
     border-radius: 7px;
     margin-left: 10px;
+
+    &:hover {
+      background-color: #85eaea;
+    }
   }
 }
 </style>

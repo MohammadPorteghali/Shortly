@@ -62,7 +62,7 @@ export default {
     font-size: 15px;
 
     &:hover {
-      opacity: .6;
+      background-color: #85eaea;
     }
   }
 }
