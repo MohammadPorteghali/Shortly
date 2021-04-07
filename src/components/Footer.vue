@@ -40,7 +40,7 @@ export default {
 <style lang="scss" scoped>
 footer {
   padding: 70px 10vw;
-  background-color: var(--very-dark-violet);
+  background-color: $very-dark-violet;
   display: flex;
 
   & .logo {
@@ -49,7 +49,7 @@ footer {
 
   & .links {
     flex: 1;
-    color: var(--gray);
+    color: $gray;
     display: flex;
 
     & li {

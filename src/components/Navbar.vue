@@ -37,7 +37,7 @@ export default {
   }
   
   & .nav-item {
-    color: var(--grayish-violet);
+    color: $grayish-violet;
     margin: 4px 20px;
     font-size: 15px;
   }
@@ -49,13 +49,13 @@ export default {
   
   & .login {
     background: transparent;
-    color: var(--grayish-violet);
+    color: $grayish-violet;
     padding: 7px 20px;
     font-size: 15px;
   }
   
   & .sign-up {
-    background: var(--cyan);
+    background: $cyan;
     color: white;
     padding: 7px 20px;
     border-radius: 20px;

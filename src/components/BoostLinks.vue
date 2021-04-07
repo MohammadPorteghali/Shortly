@@ -14,7 +14,7 @@ export default {
 <style lang="scss" scoped>
 .boost {
   background-image: url("../assets/images/bg-boost-desktop.svg");
-  background-color: var(--dark-violet);
+  background-color: $dark-violet;
   background-size: cover;
   position: relative;
   z-index: 2;
@@ -22,7 +22,6 @@ export default {
   text-align: center;
 
   & h3 {
-    font-family: Poppins;
     font-weight: 700;
     font-size: 35px;
     color: white;
@@ -30,10 +29,14 @@ export default {
   }
 
   & button {
-    background: var(--cyan);
+    background: $cyan;
     color: white;
     padding: 13px 28px;
     border-radius: 30px;
+
+    @include respond(phone) {
+      display: none;
+    }
 
     &:hover {
       background-color: #85eaea;

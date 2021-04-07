@@ -36,19 +36,19 @@ export default {
 
     & .title {
       font-weight: 700;
-      color: var(--very-dark-violet);
+      color: $very-dark-violet;
       font-size: 60px;
       line-height: 70px;
       margin-top: 85px;
     }
 
     & .subtitle {
-      color: var(--grayish-violet);
+      color: $grayish-violet;
       margin-top: 10px;
     }
 
     & button {
-      background: var(--cyan);
+      background: $cyan;
       color: white;
       padding: 13px 28px;
       border-radius: 30px;

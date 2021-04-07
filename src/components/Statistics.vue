@@ -51,7 +51,7 @@ export default {
 <style lang="scss" scoped>
 .statistics {
   margin-top: -70px;
-  background-color: var(--light-gray);
+  background-color: $light-gray;
   height: calc(100vh - 130px);
   padding-top: 180px;
 
@@ -59,15 +59,14 @@ export default {
     text-align: center;
   
     & h3 {
-      font-family: Poppins;
       font-weight: 700;
       font-size: 38px;
-      color: var(--very-dark-violet);
+      color: $very-dark-violet;
       margin: 0;
     }
 
     & p {
-      color: var(--grayish-violet)
+      color: $grayish-violet;
     }
   }
 
@@ -84,7 +83,7 @@ export default {
       height: fit-content;
 
       & .icon {
-        background-color: var(--dark-violet);
+        background-color: $dark-violet;
         position: absolute;
         height: fit-content;
         width: fit-content;
@@ -104,13 +103,12 @@ export default {
       & .des {
 
         & h4 {
-          font-family: Poppins;
           font-weight: 700;
           margin-top: 30px;
         }
 
         & p {
-          color: var(--grayish-violet);
+          color: $grayish-violet;
           font-size: 14px;
         }
       }
@@ -123,7 +121,7 @@ export default {
         content: '';
         width: 28px;
         height: 10px;
-        background-color: var(--cyan);
+        background-color: $cyan;
         position: absolute;
         left: -28px;
         top: 90px;
@@ -137,7 +135,7 @@ export default {
         content: '';
         width: 28px;
         height: 10px;
-        background-color: var(--cyan);
+        background-color: $cyan;
         position: absolute;
         left: -28px;
         top: 60px;

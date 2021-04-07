@@ -14,7 +14,7 @@ export default {
 <style lang="scss" scoped>
 .shorten {
   background-image: url(/img/bg-shorten-desktop.a82de60e.svg);
-  background-color: var(--dark-violet);
+  background-color: $dark-violet;
   background-size: cover;
   position: relative;
   z-index: 2;
@@ -32,7 +32,7 @@ export default {
   }
 
   & button {
-    background: var(--cyan);
+    background: $cyan;
     color: white;
     padding: 15px 40px;
     border-radius: 7px;
