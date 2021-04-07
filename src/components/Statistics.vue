@@ -1,5 +1,6 @@
 <template>
   <div class="statistics">
+    <shorten />
     <div class="title wrraper">
       <h3>
         Advanced statistics
@@ -42,20 +43,28 @@
 </template>
 
 <script>
+import Shorten from './Shorten.vue'
 export default {
+  components: { Shorten },
 
 }
 </script>
 
 <style lang="scss" scoped>
 .statistics {
-  margin-top: -70px;
+  margin-top: 160px;
   background-color: $light-gray;
-  padding: 180px 0 100px;
+  padding: 70px 0 100px;
+  position: relative;
+
+  @include respond(big-phone) {
+    padding: 100px 0 100px;
+  }
 
   & .title {
     text-align: center;
-  
+    margin-top: 90px;
+
     & h3 {
       font-weight: 700;
       font-size: 38px;
@@ -67,6 +76,10 @@ export default {
       }
     }
 
+    @include respond(big-phone) {
+      margin-top: 130px;
+    }
+
     & p {
       color: $grayish-violet;
     }
@@ -74,7 +87,7 @@ export default {
 
   & .boxes-container {
     display: flex;
-    margin-top: 70px;
+    margin-top: 60px;
 
     @include respond(big-phone) {
       flex-direction: column;

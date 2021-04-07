@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import outside from '../directives'
 import Vue from 'vue'
 
 Vue.directive('click-outside', {
