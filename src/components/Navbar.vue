@@ -9,14 +9,24 @@
     <div class="nav-actions">
       <button class="login">Login</button>
       <button class="sign-up">Sign up</button>
-      <button class="menu"><img src="../assets/images/icon-bars.svg" alt=""></button>
+      <button class="menu" @click.stop="showNav = !showNav"><img src="../assets/images/icon-bars.svg" alt=""></button>
     </div>
+    <navigation @showNav="showNav = false" :showNav="showNav" />
   </nav>
 </template>
 
 <script>
+import Navigation from './Navigation.vue'
+
 export default {
-  
+  components: {
+    Navigation
+  },
+  data: () => ({
+    showNav: false
+  }),
+  methods: {
+  }
 }
 </script>
 
