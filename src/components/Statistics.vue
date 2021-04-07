@@ -1,12 +1,11 @@
 <template>
   <div class="statistics">
-    <div class="title">
+    <div class="title wrraper">
       <h3>
         Advanced statistics
       </h3>
       <p>
         Track how your links are performing across the web with
-        <br>
         our advanced statistics dashboard
       </p>
     </div>
@@ -52,8 +51,7 @@ export default {
 .statistics {
   margin-top: -70px;
   background-color: $light-gray;
-  height: calc(100vh - 130px);
-  padding-top: 180px;
+  padding: 180px 0 100px;
 
   & .title {
     text-align: center;
@@ -63,6 +61,10 @@ export default {
       font-size: 38px;
       color: $very-dark-violet;
       margin: 0;
+
+      @include respond(big-phone) {
+        font-size: 8vw;
+      }
     }
 
     & p {
@@ -74,6 +76,11 @@ export default {
     display: flex;
     margin-top: 70px;
 
+    @include respond(big-phone) {
+      flex-direction: column;
+      text-align: center;
+    }
+
     & .box {
       flex: 1;
       background-color: white;
@@ -81,6 +88,12 @@ export default {
       position: relative;
       padding: 30px;
       height: fit-content;
+
+      @include respond(big-phone) {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 70px !important;
+      }
 
       & .icon {
         background-color: $dark-violet;
@@ -91,6 +104,11 @@ export default {
         border-radius: 50%;
         top: -33px;
         left: 20px;
+
+        @include respond(big-phone) {
+          left: 50%;
+          transform: translateX(-50%);
+        }
 
         & img {
           position: absolute;
@@ -125,6 +143,14 @@ export default {
         position: absolute;
         left: -28px;
         top: 90px;
+
+        @include respond(big-phone) {
+          width: 38px;
+          height: 8px;
+          left: 50%;
+          top: -55px;
+          transform: translateX(-50%) rotate(90deg);
+       }
       }
     }
 
@@ -139,6 +165,14 @@ export default {
         position: absolute;
         left: -28px;
         top: 60px;
+
+        @include respond(big-phone) {
+          width: 38px;
+          height: 8px;
+          left: 50%;
+          top: -55px;
+          transform: translateX(-50%) rotate(90deg);
+       }
       }
     }
   }

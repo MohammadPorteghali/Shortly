@@ -13,7 +13,7 @@ export default {
 
 <style lang="scss" scoped>
 .shorten {
-  background-image: url(/img/bg-shorten-desktop.a82de60e.svg);
+  background-image: url('../assets/images/bg-shorten-desktop.svg');
   background-color: $dark-violet;
   background-size: cover;
   position: relative;
@@ -23,12 +23,24 @@ export default {
   border-radius: 7px;
   display: flex;
 
+  @include respond(big-phone) {
+    background-image: url('../assets/images/bg-shorten-mobile.svg');
+    background-position: bottom;
+    flex-direction: column;
+    padding: 20px;
+  }
+
   & input {
     padding: 15px 30px;
     border-radius: 7px;
     border: none;
     margin-right: 10px;
     flex: 1;
+
+    @include respond(big-phone) {
+      margin-right: 0px;
+      margin-bottom: 10px;
+    }
   }
 
   & button {
@@ -37,6 +49,11 @@ export default {
     padding: 15px 40px;
     border-radius: 7px;
     margin-left: 10px;
+
+    @include respond(big-phone) {
+      margin-left: 0px;
+      margin-top: 10px;
+    }
 
     &:hover {
       background-color: #85eaea;

@@ -8,7 +8,6 @@
       </div>
       <div class="subtitle">
         Build your brand's recognition and get detailed
-        <br>
         insights on how your links are performing.
       </div>
       <button class="get-started">
@@ -16,7 +15,7 @@
       </button>
     </div>
     <div>
-      <img src="@/assets/images/illustration-working.svg" alt="">
+      <img class="illustration" src="@/assets/images/illustration-working.svg" alt="">
     </div>
   </div>
 </template>
@@ -31,8 +30,16 @@ export default {
 .hero {
   display: flex;
 
+    @include respond(big-phone) {
+      flex-direction: column-reverse;
+    }
+
   & .hero-int {
     flex: 1 0 50%;
+
+    @include respond(big-phone) {
+      text-align: center;
+    }
 
     & .title {
       font-weight: 700;
@@ -40,6 +47,12 @@ export default {
       font-size: 60px;
       line-height: 70px;
       margin-top: 85px;
+
+      @include respond(big-phone) {
+        font-size: 10vw;
+        line-height: 13vw;
+        margin-top: 40px;
+      }
     }
 
     & .subtitle {
@@ -58,6 +71,14 @@ export default {
         background-color: #85eaea;
       }
     }
+  }
+
+  & .illustration {
+
+    @include respond(big-phone) {
+      max-width: 130vw;
+    }
+
   }
 }
 </style>

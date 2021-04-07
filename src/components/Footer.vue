@@ -43,6 +43,12 @@ footer {
   background-color: $very-dark-violet;
   display: flex;
 
+  @include respond(big-phone) {
+    padding: 50px 6vw;
+    text-align: center;
+    flex-direction: column;
+  }
+
   & .logo {
     flex: .6;
   }
@@ -52,20 +58,43 @@ footer {
     color: $gray;
     display: flex;
 
+    @include respond(big-phone) {
+      flex-direction: column;
+    }
+
+    & ul {
+
+      @include respond(big-phone) {
+        margin-top: 30px;
+      }
+    }
+
     & li {
       margin: 0 10px 10px;
       font-size: 15px;
+
+      @include respond(big-phone) {
+        font-size: 15px;
+      }
     }
 
     & .title {
       color: white !important;
       margin-bottom: 25px;
+
+      @include respond(big-phone) {
+      margin-bottom: 20px;
+      }
     }
   }
 
   & .social-media img {
     margin: 0 10px;
     width: 22px;
+
+    @include respond(big-phone) {
+      margin-top: 30px;
+    }
   }
 }
 </style>

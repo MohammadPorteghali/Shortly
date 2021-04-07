@@ -29,8 +29,13 @@ button:hover {
 ul {
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
 .wrraper {
-  margin: 0 10vw;
+  margin: 0 9vw;
+
+  @media (max-width: 400px) {
+    margin: 0 6vw;
+  }
 }

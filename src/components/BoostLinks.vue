@@ -21,11 +21,20 @@ export default {
   padding: 40px;
   text-align: center;
 
+  @include respond(big-phone) {
+  background-image: url("../assets/images/bg-boost-mobile.svg");
+    padding: 60px 20px;
+  }
+
   & h3 {
     font-weight: 700;
     font-size: 35px;
     color: white;
-    margin: 15px;
+    margin: 15px 0;
+
+    @include respond(big-phone) {
+      font-size: 7.5vw;
+    }
   }
 
   & button {
@@ -33,10 +42,6 @@ export default {
     color: white;
     padding: 13px 28px;
     border-radius: 30px;
-
-    @include respond(phone) {
-      display: none;
-    }
 
     &:hover {
       background-color: #85eaea;
