@@ -58,7 +58,7 @@ export default {
   position: relative;
 
   @include respond(big-phone) {
-    padding: 100px 0 100px;
+    padding: 120px 0 100px;
   }
 
   & .title {

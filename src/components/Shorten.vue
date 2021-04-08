@@ -12,10 +12,15 @@
       <i v-if="loading" class="loading">Please wait...</i>
       <button @click="shortLink">Shorten It!</button>
     </div>
-    <div class="wrraper result" v-for="(item, index) in links" :key="index">
-      {{ item.ol }}
-      <hr>
-      {{ item.sl }}
+    <div class="results-container">
+      <div class="wrraper result" v-for="(item, index) in links" :key="index">
+        {{ item.ol }}
+        <hr>
+        <span>{{ item.sl }}</span>
+        <button :class="item.copid ? 'copid' : ''" @click="item.copid = true" v-clipboard="item.sl">
+          {{ item.copid ? 'Copid!' : 'Copy' }}
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -43,30 +48,26 @@ export default {
         }).then(({data}) => {
           this.loading = false
           if (data.ok) {
+            this.link = ''
             if ( this.links.length === 3) {
               this.links.shift()
             } 
-            this.links.push({ol: data.result.original_link, sl: data.result.full_short_link})
-            window.localStorage.setItem('links', [JSON.stringify({ol: data.result.original_link, sl: data.result.full_short_link})])
+            this.links.push({ol: data.result.original_link, sl: data.result.full_short_link, copid: false})
+            window.localStorage.setItem('links', JSON.stringify(this.links))
           } else {
             this.showHint = true 
             this.hint = data.error;
           }
         }).catch((err) => {
-            console.log(err);
           this.loading = false
           this.showHint = true 
           this.hint = 'Url is invalid';
         })
       }
-    },
-    getItems() {
-      this.links = [...window.localStorage.getItems()]
-      console.log('twed', this.links);
     }
   },
   mounted() {
-    this.links.push({...JSON.parse(window.localStorage.getItem('links'))});
+    this.links = [...JSON.parse(window.localStorage.getItem('links'))]
   }
 }
 </script>
@@ -157,18 +158,71 @@ export default {
   }
 }
 
+.results-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .result {
   background-color: #ffffff;
   position: relative;
   z-index: 2;
-  padding: 40px;
-  margin-top: 30px;
-  border-radius: 7px;
+  padding: 15px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
   display: flex;
+  align-items: center;
+  font-size: 16px;
 
   @include respond(big-phone) {
     flex-direction: column;
-    padding: 20px;
+    padding: 15px;
+    align-items: flex-start;
+  }
+
+  & button {
+    background: $cyan;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+
+    @include respond(big-phone) {
+      margin-left: 0px;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: #85eaea;
+    }
+  }
+
+  & .copid {
+    background: $dark-violet;
+
+    &:hover {
+      background-color: #4B3F6B;
+    }
+  }
+
+  & span {
+    color: $cyan;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  & hr {
+    opacity: 0;
+
+    @include respond(big-phone) {
+      opacity: 1;
+      width: calc(100% + 30px);
+      margin-left: -15px;
+      border: none;
+      border-bottom: 1px solid $gray;
+    }
   }
 }
 </style>
